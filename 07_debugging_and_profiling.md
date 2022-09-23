@@ -1,5 +1,4 @@
-
-# 7- Debugging and Profiling
+# Debugging and Profiling
 
 ## Exercise
 
@@ -69,8 +68,8 @@ Put the code into a file and make it executable. Install prerequisites: pycallgr
 ```bash
 sudo apt-get install graphviz # Install pycallgraph and graphviz
 chmod +x 07fibonacci.py # make the script executable
-pycallgraph graphviz --output-file=pycallgraph.png ./07fibonacci.py
-pycallgraph graphviz --output-file=pycallgraph_memoization.png ./07fibonacci_memoization.py
+pycallgraph graphviz --output-file=07pycallgraph.png ./07fibonacci.py
+pycallgraph graphviz --output-file=07pycallgraph_memoization.png ./07fibonacci_memoization.py
 ```
 
 <img src="pycallgraph_memoization.png" alt="pycallgraph_memoization" width="150"/>
