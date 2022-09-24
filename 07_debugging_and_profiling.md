@@ -72,8 +72,8 @@ pycallgraph graphviz --output-file=07pycallgraph.png ./07fibonacci.py
 pycallgraph graphviz --output-file=07pycallgraph_memoization.png ./07fibonacci_memoization.py
 ```
 
-<img src="pycallgraph_memoization.png" alt="pycallgraph_memoization" width="150"/>
-<img src="pycallgraph.png" alt="pycallgraph" width="100"/>
+<img src="07_files/07pycallgraph_memoization.png" alt="07pycallgraph_memoization" width="150"/>
+<img src="07_files/07pycallgraph.png" alt="07pycallgraph" width="100"/>
 
 By memoizing the functions, each fibN is called only once. This became apparent in terms of execution time when N is increased.
 
