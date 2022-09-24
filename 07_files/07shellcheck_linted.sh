@@ -6,5 +6,5 @@ for f in ./*.m3u  # command expansion causes word splitting and glob expansion
                   # https://github.com/koalaman/shellcheck/wiki/SC2045#rationale
       do
   grep -qi  'hq.*mp3' "$f" \
-    && echo -e "Playlist $f contains a HQ file in mp3 format"
+    && printf "Playlist %s contains a HQ file in mp3 format" "$f"
 done
