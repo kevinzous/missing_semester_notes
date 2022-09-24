@@ -1,4 +1,5 @@
-import random
+# flake8: noqa
+# import random
 
 
 def test_sorted(fn, iters=1000):
@@ -8,7 +9,7 @@ def test_sorted(fn, iters=1000):
         # print(fn.__name__, fn(l))
 
 
-@profile
+# @profile
 def insertionsort(array):
 
     for i in range(len(array)):
