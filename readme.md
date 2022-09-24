@@ -11,3 +11,14 @@
 7: Debugging and Profiling
 8: Metaprogramming (build systems, dependency management, testing, CI)
 9: Security and Cryptography
+
+Main takeaways:
+Unix/Linux commands and pipelining
+bash/zsh scripting and configuration
+Virtual/Remote Machine setup and connection
+vim editor, plugins and tmux
+Git/Github
+ssh configuration
+Debugging profilers
+Regular expressions
+Public/Private key encryptions
