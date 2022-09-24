@@ -10,7 +10,7 @@ Q1. Use journalctl on Linux or log show on macOS to get the super user accesses 
 sudo ls .
 journalctl --since yesterday
 # returns --No entries--
-# journalctl based on systemd, which is disabled in WSL2 
+# journalctl based on systemd, which is disabled in WSL2
 # no files at /var/log/syslog or /var/log/journal/*
 ```
 
@@ -46,19 +46,19 @@ python -m cProfile -s time 07sorts.py | grep 07sorts.py
 
 ```bash
 # Check bottleneck with line profiler
-pip install line_profiler 
+pip install line_profiler
 kernprof -l -v 07sorts.py # decorate function to be tested with @profile before
 ```
 
 ```bash
 # Check memory profiler
 pip install memory_profiler
-python -m memory_profiler 07sorts.py # decorate function to be tested with @profile before 
+python -m memory_profiler 07sorts.py # decorate function to be tested with @profile before
 ```
 
 ```bash
 # Check cycle counts and cache hits and misses
-sudo apt-get install linux-tools-common linux-tools-generic 
+sudo apt-get install linux-tools-common linux-tools-generic
 # not available in WSL 2 : https://github.com/microsoft/WSL/issues/8480
 ```
 
@@ -89,8 +89,8 @@ Q8. Limiting processes resources can be another handy tool in your toolbox. Try 
 
 ```bash
 sudo apt-get install stress
-uptime # see current system load averages 
-stress -c 3 
+uptime # see current system load averages
+stress -c 3
 htop # load average have increased from 0.10 to 3.5
      # 3 CPU are at 100% and taken by 3 processes
 taskset --cpu-list 0,2 stress -c 3 # 2 CPU are at 100%

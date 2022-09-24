@@ -30,7 +30,7 @@ install:
 	sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 	pip install matplotlib
 ```
-    
+
  2. Take a look at the various ways to specify version requirements for
     dependencies in [Rust's build system](https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html).
     Most package repositories support similar syntax. For each one
@@ -45,7 +45,7 @@ name = "my-package"
 version = "0.1.0"
 
 [dependencies]
-time = "0.1.12"          # does not change left most non zero digits 
+time = "0.1.12"          # does not change left most non zero digits
                          # 0.1.12 := >=0.1.12, <0.2.0
 
 openssl = "^1.0.1"       # caret = exact version
@@ -57,12 +57,12 @@ python = "3.*"            # wildcard : any version allowed by wildcard
 
 regex = ">= 1.2.0"       # comparison
 
-regex = ">= 1.2, < 1.5"  # multiple 
+regex = ">= 1.2, < 1.5"  # multiple
 ```
 
  3. Git can act as a simple CI system all by itself. In `.git/hooks`
     inside any git repository, you will find (currently inactive) files
-    that are run as scripts when a particular action happens. Write a 
+    that are run as scripts when a particular action happens. Write a
     [`pre-commit`](https://git-scm.com/docs/githooks#_pre_commit) hook
     that runs `make paper.pdf` and refuses the commit if the `make`
     command fails. This should prevent any commit from having an
@@ -77,7 +77,7 @@ fi
 ```
 
  4. Set up a simple auto-published page using [GitHub Pages](https://pages.github.com/).
-    Add a [GitHub Action](https://github.com/features/actions) to the repository to run `shellcheck` on any shell 
+    Add a [GitHub Action](https://github.com/features/actions) to the repository to run `shellcheck` on any shell
     files in that repository (here is [one way to do it](https://github.com/marketplace/actions/shellcheck)). Check that it works!
 
 
