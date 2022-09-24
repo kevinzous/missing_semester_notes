@@ -23,3 +23,7 @@ repos:
     hooks:
     -   id: shellcheck
 #       args: ["--severity=warning"]  # Optionally only show errors and warnings
+-   repo: https://github.com/pycqa/flake8
+    rev: 3.8.4
+    hooks:
+    -   id: flake8
