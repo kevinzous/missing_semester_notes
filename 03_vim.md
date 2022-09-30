@@ -1,6 +1,6 @@
 # Vim editor
 
-# Exercises
+## Exercises
 
 1. Complete `vimtutor`. Note: it looks best in a [80x24](https://en.wikipedia.org/wiki/VT100) (80 columns by 24 lines)
    terminal window.

@@ -22,6 +22,15 @@ cat /var/log/syslog | grep hello
 
 Q2. Do this hands on pdb tutorial to familiarize yourself with the commands. For a more in depth tutorial read this
 
+Add following at the start of the python code
+```python
+import pdb; pdb.set_trace()
+```
+and run
+```bash
+python script.py
+```
+
 Q3. Install shellcheck and try checking the following script. What is wrong with the code? Fix it. Install a linter plugin in your editor so you can get your warnings automatically
 
 ```sh

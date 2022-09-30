@@ -59,11 +59,13 @@ cat semester
 ```bash
 ./semester    # asks the kernel to run semester as a program, and the
               # kernal (program loader) will check permissions first,
-              # and then use /bin/bash (or sh or zsh etc) to actually
-              # execute the script.
+              # and then use /bin/bash (or sh or zsh etc) to starts
+              # a new instance of bash and execute the script.
 sh semester   # asks the kernel (program loader) to run /bin/sh,
               # not sh semester as the program so the execute permissions
               # of the file do not matter.
+
+# source semester execute semester in the current bash session
 ```
 
  8. Look up the `chmod` program (e.g. use `man chmod`).
