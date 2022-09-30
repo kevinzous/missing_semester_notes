@@ -9,7 +9,7 @@ jobs:
   #     - name: Run ShellCheck
   #       uses: ludeeus/action-shellcheck@master
   write_good_job: # https://github.com/marketplace/actions/lint-markdown
-    name: lint Markdown files
+    name: lint markdown files
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -30,8 +30,8 @@ jobs:
           allow-repeats: false # This is the default
 
           # https://github.com/marketplace/actions/python-flake8
-  pyflakes:
-      name: Python Lint
+  lint:
+      name: python linter
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
@@ -47,3 +47,9 @@ jobs:
             # config: path/to/flake8.ini
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  fmt:
+      name: python formatter
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: psf/black@stable
